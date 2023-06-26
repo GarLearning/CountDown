@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    box-shadow:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://i.gifer.com/origin/f9/f90fc85cf18e351c565692dcb1c0feeb_w200.webp"),
+        url("https://i.gifer.com/origin/65/6566a2e13e5e7ec485a994c17a338fbc_w200.webp");
+    background-position: right bottom, left top;
+    background-repeat: repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+/* 
+https://mir-s3-cdn-cf.behance.net/projects/404/39fb91167665005.Y3JvcCwxOTk5LDE1NjQsMCww.jpg
+
+https://www.kcrw.com/culture/shows/life-examined/psychotherapy-psychedelics-drugs-psilocybin-ketamine/@@images/rectangular_image/page-header?v=1652861713.59
+https://ygo-assets-websites-legacy.yougov.net/cumulus_uploads/entry/43267/gettyimages-1368035193-2048x2048.jpeg
+https://www.psypost.org/wp-content/uploads/2020/08/Psychedelic-seamless-pattern-with-magic-mushrooms-over-sacred-geometry.jpg
+https://static.vecteezy.com/system/resources/previews/002/353/839/original/seamless-pattern-with-red-lips-in-pop-art-style-on-abstract-background-with-dots-beauty-repeated-backdrop-girlish-wallpaper-dots-and-kiss-lips-colorful-cartoon-style-vector.jpg
+
+https://i.pinimg.com/236x/e3/97/3f/e3973fbf922454ef5fbf50ac767a4cb3.jpg
+
+url("https://i.gifer.com/origin/86/8680926a41cc3ea7fd5bb1dc996bf91f.gif"),
+url("https://i.gifer.com/origin/f9/f90fc85cf18e351c565692dcb1c0feeb_w200.webp"),
+url("https://i.gifer.com/origin/96/96dc135a6f60e43597a5486807e3abd8_w200.webp"),
+url("https://i.gifer.com/origin/65/6566a2e13e5e7ec485a994c17a338fbc_w200.webp")
+*/
+
+
+#progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 10px;
+    background-color: #0000006b;
+    overflow: hidden;
+}
+
+#progress span {
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    font-size: 25px;
+    background: linear-gradient(to right, #2237a9, #c471ed, #f64f59, #1ad542);
+    filter: drop-shadow(5px 5px #333);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#today-sorted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50% 50% 56% 44% / 56% 27% 73% 44% ;
+    background-color: #0000006b;
+}
+
+#today-sorted a {
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    font-size: 40px;
+    background: linear-gradient(
+        to right, #2237a9, #c471ed, #f64f59, #1ad542, #e6f700
+    );
+    filter: drop-shadow(5px 5px #333);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 1s ease-in-out infinite alternate;
+    user-select: none; 
+    cursor: pointer;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0%;
+    }
+    25% {
+        background-position: 25%;
+    }
+    50% {
+        background-position: 50%;
+    }
+    75% {
+        background-position: 75%;
+    }
+    100% {
+        background-position: 100%;
+    }
+
+}
+
+i {
+    position: absolute;
+    inset: 0;
+    transition: 0.5s;
+}
+
+i:nth-child(1) {
+    border: 0px solid #2237a9;
+    box-shadow: 0px 0px 20px 5px #2237a9;
+    border-radius: 71% 29% 70% 30% / 50% 44% 56% 50% ;
+    animation: animate 5s linear infinite;
+}
+i:nth-child(2) {
+    border: 0px solid #c471ed;
+    box-shadow: 0px 0px 20px 5px #c471ed;
+    border-radius: 73% 27% 57% 43% / 37% 79% 21% 63% ;
+    animation: animate 4s linear infinite;
+}
+i:nth-child(3) {
+    border: 0px solid #f64f59;
+    box-shadow: 0px 0px 20px 5px #f64f59;
+    border-radius: 27% 73% 67% 33% / 46% 79% 21% 54% ;
+    animation: animate2 4s linear infinite;
+}
+i:nth-child(4) {
+    border: 0px solid #1ad542;
+    box-shadow: 0px 0px 20px 5px #1ad542;
+    border-radius: 27% 73% 78% 22% / 87% 18% 82% 13% ;
+    animation: animate 2s linear infinite;
+}
+i:nth-child(4) {
+    border: 0px solid #e6f700;
+    box-shadow: 0px 0px 20px 5px #e6f700;
+    border-radius: 35% 65% 45% 55% / 56% 66% 34% 44% ;
+    animation: animate2 2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
